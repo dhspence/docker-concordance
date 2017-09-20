@@ -83,3 +83,6 @@ RUN cd /opt/ && unzip /tmp/${maven_package_name}-bin.zip \
     && mv /opt/${gatk_dir_name}-${gatk_version}/protected/gatk-package-distribution/target/gatk-package-distribution-${gatk_version}.jar /opt/GenomeAnalysisTK.jar \
     && rm -rf /opt/${gatk_dir_name}-${gatk_version} /opt/${maven_package_name}
     
+COPY Homo_sapiens_assembly38.dbsnp138.idtexome.snvs.G5.thinned1e6.vcf.gz /opt/
+COPY Homo_sapiens_assembly38.dbsnp138.idtexome.snvs.G5.thinned1e6.vcf.gz.tbi /opt/
+    
